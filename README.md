@@ -23,7 +23,7 @@ Draw your artwork, feed it live data and define in flowcharting how the data wil
 ## Use cases
   - Technical schema example  
 ![example 1](https://github.com/algenty/flowcharting-repository/blob/master/images/fc_archi_example.png?raw=true)
- 
+
 See more example at draw.io  
 
 # Demo site
@@ -60,6 +60,10 @@ Special thanks to
 # Changelog
 ## [[1.0.0e (Last build 2023-12-14)]](./built/)
 
+### Added
+
+- 针对chart中的 graph 做优化，针对 Large 下的graph默认增加了5个时间横坐标及纵坐标支持；同时左边字体做了优化，更易见
+
 ### Fixed
   - Fix bug on zoom in and zoom out
   - Fix draw.io save from embed.diagrams.net
@@ -92,8 +96,8 @@ Special thanks to
   - New event mapping operators
   - Enable/Disable rule/state/mapping independently.
   - Colors (threshold and background) can be empty.
-  
-  
+
+
 ### Fixed
   - Fixed : Inspect mode [(issue #209)](https://github.com/algenty/grafana-flowcharting/issues/209) ([See example](https://algenty.github.io/flowcharting-repository/images/inspectv7_ani.png?raw=true))  
   - Fixed : Label position in shape [(issue #147)](https://github.com/algenty/grafana-flowcharting/issues/147)   
@@ -106,7 +110,7 @@ Special thanks to
   - Fixed : Background color edition in flowchart tab
 
 See [Changelog file](CHANGELOG.md) for history
-  
+
 # Annex
 All notable changes to this project will be documented in this file.
 
@@ -198,7 +202,7 @@ grafana-cli plugins install agenty-flowcharting-panel
 ## Build
 
 ```sh
-# before
+# 插件构建
 gulp clean
 npm install -g yarn
 npm install @grafana/toolkit --legacy-peer-deps

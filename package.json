@@ -1,0 +1,62 @@
+{
+  "name": "flowcharting",
+  "version": "1.0.0e",
+  "description": "flow charting plugin for Grafana",
+  "main": "src/module.js",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "archive": "gulp package",
+    "clean": "gulp clean",
+    "sign": "grafana-toolkit plugin:sign"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algenty/grafana-flowcharting"
+  },
+  "author": "Arnaud GENTY",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/algenty/grafana-flowcharting/issues"
+  },
+  "homepage": "https://github.com/algenty/grafana-flowcharting",
+  "devDependencies": {
+    "@grafana/data": "8.5.2",
+    "@grafana/eslint-config": "3.0.0",
+    "@grafana/runtime": "8.5.2",
+    "@grafana/toolkit": "^8.5.2",
+    "@grafana/ui": "8.5.2",
+    "@types/angular": "1.8.2",
+    "@types/chartist": "^0.9.46",
+    "@types/chroma-js": "^2.0.0",
+    "@types/grafana": "github:CorpGlory/types-grafana.git",
+    "@types/jquery": "^3.5.14",
+    "@types/lodash": "^4.14.182",
+    "@types/pako": "^1.0.3",
+    "build-number-generator": "^1.0.0",
+    "chartist": "^0.11.4",
+    "chroma-js": "^2.1.0",
+    "console": "^0.7.2",
+    "dayjs": "^1.9.6",
+    "del": "^6.0.0",
+    "grafana-sdk-mocks": "grafana/grafana-sdk-mocks",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-json-editor": "^2.5.6",
+    "gulp-notify": "^4.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-zip": "^5.1.0",
+    "jest-fetch-mock": "^3.0.3",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.3.4",
+    "pako": "^2.0.4",
+    "postcss": "^8.4.13",
+    "safe-eval": "^0.4.1",
+    "vkbeautify": "^0.99.3"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

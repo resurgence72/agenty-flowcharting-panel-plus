@@ -1,0 +1,218 @@
+.gf-overflow-x-visible {
+  overflow-x: visible;
+}
+
+.gf-overflow-x-visible {
+  overflow-y: visible;
+}
+
+.gf-custom-scrollbar .gf-view {
+  overflow: hidden auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+div.gf-table-main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden auto;
+  display: flex;
+}
+
+div.gf-table-thead {
+  display: flex;
+  height: 33px;
+  // overflow: hidden auto;
+  background: $table_header_background;
+  position: relative;
+  width: 100%;
+  overflow: hidden auto;
+}
+
+div.gf-table-tfooter {
+  display: inline-block;
+  height: 33px;
+  background: $table_header_background;
+  position: relative;
+  width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden auto;
+}
+
+div.gf-table-body {
+  /* height: 33px; */
+  // overflow: hidden auto;
+  position: relative;
+  width: 100%;
+  /* display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    overflow: hidden auto; */
+  /* will-change: transform; direction: ltr; */
+}
+
+
+// Not use at this time
+div.gf-table-body-open {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid yellow;
+  &:hover {
+    border: 1px solid red;
+  }
+}
+
+div.gf-table-title {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  /* display: flex; */
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 6px;
+  /* margin-bottom: 6px; */
+}
+
+div.gf-table-resizeHandle {
+  /* display: inline-block; */
+  float: right;
+  background: rgb(31, 96, 196);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  min-width: 3px;
+  max-width: 3px;
+  height: 100%;
+  /* position: absolute; */
+  right: -4px;
+  border-radius: 3px;
+  top: 0px;
+  z-index: 1030;
+  touch-action: none;
+  cursor: col-resize !important;
+}
+
+div.gf-table-resizeHandle:hover {
+  opacity: 1;
+}
+
+div.gf-table-columnheader {
+  /* padding: 6px; */
+  overflow-x: hidden;
+  white-space: nowrap;
+  color: $table_text_header_color;
+  border-right: 1px solid $table_columnheader_border;
+  display: flex;
+  user-select: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+div.gf-table-columnfooter {
+  /* padding: 6px; */
+  overflow-x: hidden;
+  // white-space: nowrap;
+  // color: $table_text_header_color;
+  // border-right: 1px solid $table_columnheader_border;
+  // display: flex;
+  user-select: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width : 100%;
+  // justify-content: space-between;
+}
+
+div.gf-table-rows {
+  border-bottom: 1px solid $table_cell_border;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  // overflow: visible;
+}
+
+div.gf-table-rows-2 {
+  @extend .gf-table-rows
+}
+
+div.gf-table-row_line {
+  height: 35px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden auto;
+  width: 100%;
+  flex-direction: row;
+}
+
+div.gf-table-rows:hover {
+  background-color: $table_row_hover;
+  transform: 0.2s ease;
+}
+
+div.gf-table-rows-2:hover {
+  background-color: $table_row_hover_2;
+  transform: 0.2s ease;
+}
+
+div.gf-table-row_body {
+  border-left: 1px solid $table_cell_border;
+  border-right: 1px solid $table_cell_border;
+  border-bottom: 1px solid $table_cell_border;
+  width: 100%;
+  padding: 10px;
+}
+
+
+div.gf-table-cells {
+  border-right: 1px solid $table_cell_border;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  user-select: auto;
+  justify-content: flex-start;
+  padding : 1px;
+}
+
+div.gf-table-cells:hover {
+  // overflow-x: visible;
+  // box-shadow: $table_cell_hover_border 0px 0px 2px;
+  // background: $table_cell_hover_background;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid $table_cell_hover_border;
+  padding : 0px;
+  // transition: 0.2s;
+  // z-index: 1;
+  // width: auto !important;
+}
+
+div.gf-table-content {
+  padding: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  flex: 1 1 0%;
+}

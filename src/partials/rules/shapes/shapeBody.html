@@ -1,0 +1,50 @@
+<h5 class="section-heading">
+    Detail
+    <info-popover mode="right-normal"><span ng-bind-html="$GF.popover('Definition of shape mapping', 'SHAPES')"></span>
+    </info-popover>
+</h5>
+<!-- WHAT/PATTERN -->
+<div class="gf-form">
+    <label class="gf-form-label width-10">
+        What
+        <info-popover mode="right-normal">
+            <span ng-bind-html="$GF.popover('Enter shape Id or click on target button', 'SHAPES')">
+            </span>
+        </info-popover>
+    </label>
+    <input type="text" style="margin-right: 2px;" id="{{ shape.uid }}" placeholder="id or regex of shape"
+        class="gf-form-input width-8" ng-model="shape.pattern"
+        title="Enter an id, label,metadata attribute or regex to identify object"
+        bs-typeahead="rule.getShapeMapOptions().identByProp !== 'metadata' ? editor.getCellNamesTypeHead : editor.getCellNamesMD" data-min-length="0" data-items="100"
+        ng-model-onblur data-placement="right" />
+    <button class="btn btn-secondary btn-small" style="margin-left:2px; height: 32px;"
+        ng-show="rule.getShapeMapOptions().identByProp !== 'metadata'"
+        title="Select an object in diagram/graph" ng-click="shape.enableMapping(true)">
+        <div Class="gf-icon-target" style="margin-bottom: 7px;margin-right: 2px;"></div>
+    </button>
+    <button class="btn btn-secondary btn-small" style="margin-left:5px; height: 32px;" title="Identify selected objects"
+        ng-mousedown="editor.highlightXCells(shape)" ng-mouseup="editor.unhighlightXCells(shape)" ng-mouseleave="editor.unhighlightXCells(shape)">
+        <div Class="gf-icon-location" style="margin-bottom: 7px;margin-right: 2px;"></div>
+    </button>
+</div>
+<div class="gf-form">
+    <label class="gf-form-label width-10">When
+        <info-popover mode="right-normal">
+            <span ng-bind-html="$GF.popover('Select condition to apply color and tooltip on shape.', 'SHAPES')">
+            </span>
+        </info-popover>
+    </label>
+    <select class="gf-form-input width-8" ng-model="shape.condition"
+        ng-options="c.value as c.text for c in editor.colorOn"></select>
+</div>
+<div class="gf-form">
+    <label class="gf-form-label width-10">How
+        <info-popover mode="right-normal">
+            <span
+                ng-bind-html="$GF.popover('Select the method to color the Shape/text/image', 'SHAPES', 'colormode_ani')">
+            </span>
+        </info-popover>
+    </label>
+    <select class="gf-form-input width-8" ng-model="shape.style"
+        ng-options="c.value as c.text for c in editor.style"></select>
+</div>

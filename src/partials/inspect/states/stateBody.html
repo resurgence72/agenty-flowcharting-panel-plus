@@ -1,0 +1,95 @@
+<div style="width: 100%;height: auto;display:inline-flex">
+    <!-- FIELDS -->
+    <div style="width: 80%;height: auto;">
+        <h5 class="section-heading">
+            Detail
+        </h5>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Id</span>
+                <!-- <info-popover mode="right-normal">
+                    <span ng-bind-html="$GF.popover('Enter shape a new Id', 'EVENTS')">
+                    </span>
+                </info-popover> -->
+            </label>
+            <span>{{state.xcell.uid}}</span>
+            <!-- <input type="text" style="margin-right: 2px;" id="{{ state.uid }}" placeholder="Draw.io Id "
+                class="gf-form-input width-8" ng-model="state.xcell.mxcell.id" ng-model-onblur
+                title="Enter an id"
+                ng-blur="editor.onRulesChange()" data-min-length="0" data-items="100"
+                data-placement="right" />
+            <button class="btn btn-secondary btn-small" style="margin-left:2px; height: 32px;"
+                ng-show="editor.isEdited(state)"
+                title="Restore previous Id" ng-click="editor.undo(state)">
+                <div Class="gf-icon-undo" style="margin-bottom: 7px;margin-right: 2px;"></div>
+            </button> -->
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Current Label</span>
+            </label>
+            <span>{{state.xcell.getLabel()}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Default Label</span>
+            </label>
+            <span>{{state.xcell.getDefaultLabel()}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Shape Form</span>
+            </label>
+            <span>{{state.getShapeName()}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Current level</span>
+            </label>
+            <span>{{state.getTextLevel()}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Raw value</span>
+            </label>
+            <span>{{state.highestValue}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Formated value</span>
+            </label>
+            <span>{{state.highestFormattedValue}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Rules</span>
+            </label>
+            <span>{{state.currRules.join(', ')}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Metrics</span>
+            </label>
+            <span>{{state.currMetrics.join(', ')}}</span>
+        </div>
+        <div class="gf-form">
+            <label class="gf-form-label width-10">
+                <span>Styles</span>
+            </label>
+            <div style="overflow-wrap: break-word;max-width: 128px;">
+                <span>{{state.getShapeStyles()}}</span>
+            </div>
+        </div>
+    </div>
+    <!-- PREVIEW -->
+    <div style="width: 20%;height: auto;">
+        <h5 class="section-heading">
+            <span>Preview</span>
+        </h5>
+        <div
+            class="gf-unselectable"
+            style="width: 100px;height: 100px;right: 0px; border: none; left: 0px; top: 0px; bottom: 0px; touch-action: none; overflow: auto; cursor: default;z-index: 1;-webkit-box-sizing:content-box;box-sizing:content-box"
+            ng-attr-id="{{'preview-' + state.xcell.uid}}">
+        </div>
+    </div>
+</div>

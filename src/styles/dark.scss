@@ -1,0 +1,18 @@
+$notifier_background : rgba(0, 0, 0, 0.7);
+$color_picker_border : rgb(228, 228, 228);
+$table_columnheader_border : rgb(20, 22, 25);
+$table_header_background : rgb(32, 34, 38);
+$table_text_header_color : rgb(51, 162, 229);
+$table_cell_border : $table_header_background;
+$table_cell_hover_border : #1e2f4c;
+$table_cell_hover_background : rgb(25, 27, 30);
+$table_row_hover : rgb(25, 27, 30);
+$table_row_hover_2 : rgb(35, 37, 40);
+$icon_color: #c7d0d9;
+$icon_action : $table_text_header_color;
+$icon_action_hover : #33a2e5;
+$icon_action_filter : invert(55%) sepia(88%) saturate(1374%) hue-rotate(174deg) brightness(93%) contrast(92%);
+$icon_selected : #33a2e5;
+$hr_color : #333;
+
+@import 'common';

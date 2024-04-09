@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`States GFState should be new 1`] = `
+GFState {
+  "ackKey": Set {},
+  "changedKey": Map {},
+  "defaultValue": Map {},
+  "keys": Array [],
+  "matchLevel": Map {},
+  "matchValue": Map {},
+  "matchedKey": Map {},
+  "xcell": Object {
+    "id": "1234",
+  },
+  "xgraph": undefined,
+}
+`;
